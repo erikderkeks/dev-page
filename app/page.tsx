@@ -31,7 +31,7 @@ export default async function Home() {
           handle={`@${username}`}
           bio={
             profile?.bio ??
-            'I build calm, maintainable software — with an eye for systems, clarity and craft.'
+            'Dont build one time systems. Build echosystems.'
           }
           location={profile?.location ?? 'Switzerland'}
         />

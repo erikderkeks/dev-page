@@ -5,7 +5,6 @@ import { ArrowUpRight, Star, GitFork, Code2 } from 'lucide-react'
 import type { GitHubRepo } from '@/lib/github'
 
 function langDot(language: string | null) {
-  // Monochrome dot (we avoid color). We still show language text.
   return <span className="metaDot" aria-hidden="true" />
 }
 
@@ -17,7 +16,7 @@ export function Projects({ repos }: { repos: GitHubRepo[] }) {
           GitHub data unavailable
         </p>
         <p className="cardDesc" style={{ marginTop: 8 }}>
-          Rate limit or offline build. Try again later — the layout stays intact.
+          Rate limit or offline build. Try again later.
         </p>
       </div>
     )

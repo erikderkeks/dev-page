@@ -16,7 +16,7 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'erikderkeks — Developer',
-  description: 'Monochrome developer page with liquid glass UI and subtle motion.',
+  description: 'Never settle for less than perfection',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

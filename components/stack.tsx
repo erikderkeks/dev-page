@@ -6,6 +6,8 @@ import { motion } from 'framer-motion'
 const items = [
   { icon: Terminal, label: 'TypeScript / Node.js' },
   { icon: Layers, label: 'React / Next.js' },
+  { icon: Layers, label: 'Angular / Ionic' },
+  { icon: Layers, label: 'Azure Functions / IoT Edge' },
   { icon: Sparkles, label: 'UI Motion & Microinteractions' },
   { icon: Boxes, label: 'Docker & Tooling' },
   { icon: Database, label: 'Data & APIs' },

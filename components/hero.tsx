@@ -69,10 +69,10 @@ export function Hero({
             <p className="kicker">Focus</p>
             <div className="sep" />
             <p style={{ margin: 0, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55 }}>
-              Calm architecture. Minimal interfaces. Strong defaults.
+              Clean systems with power to expand
               <br />
               <span style={{ color: 'rgba(255,255,255,0.52)' }}>
-                A monochrome, Tokyo-at-night mood — without the noise.
+                Tokyo-at-night — without the noise.
               </span>
             </p>
           </div>
