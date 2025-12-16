@@ -9,12 +9,20 @@ import { getProfile, getRepos, pickFeatured, buildStats } from '@/lib/github'
 export default async function Home() {
   const username = 'erikderkeks'
 
-  const [profile, repos] = await Promise.all([getProfile(username), getRepos(username)])
+  const [profile, repos] = await Promise.all([
+    getProfile(username),
+    getRepos(username),
+  ])
+
   const featured = pickFeatured(repos)
   const stats = buildStats(profile, repos)
 
   return (
     <div className="page">
+      {/* FIX: globaler, fixer Hintergrund */}
+      <div className="pageBg" aria-hidden="true" />
+
+      {/* Content */}
       <div className="container">
         <TopNav username={username} />
 
@@ -28,29 +36,29 @@ export default async function Home() {
           location={profile?.location ?? 'Switzerland'}
         />
 
-        <div className="section" id="work">
+        <section className="section" id="work">
           <div className="sectionTitle">
             <h2>Signals</h2>
             <p>Minimal stats, maximum clarity</p>
           </div>
           <Stats stats={stats} />
-        </div>
+        </section>
 
-        <div className="section" id="projects">
+        <section className="section" id="projects">
           <div className="sectionTitle">
             <h2>Projects</h2>
             <p>Selected from GitHub</p>
           </div>
           <Projects repos={featured} />
-        </div>
+        </section>
 
-        <div className="section" id="stack">
+        <section className="section" id="stack">
           <div className="sectionTitle">
             <h2>Stack</h2>
             <p>Tools I like to ship with</p>
           </div>
           <Stack />
-        </div>
+        </section>
 
         <Footer />
       </div>

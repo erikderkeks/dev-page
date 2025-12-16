@@ -16,17 +16,25 @@ export function Hero({
 }) {
   return (
     <section className="hero">
+      {/* Hintergrund-Effekte */}
       <div className="scanlines" aria-hidden="true" />
       <div className="vertMark" aria-hidden="true">
         <b>黒</b> / 白
       </div>
+      <div className="ghoulOverlay" aria-hidden="true" />
 
+      {/* Inhalt */}
       <div className="heroGrid">
         <motion.div
           initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.9, ease: [0.2, 0.9, 0.2, 1] }}
         >
+          {/* OPTIONAL: Profilbild */}
+          <div className="heroAvatar">
+            <img src="/profile.webp" alt={name} />
+          </div>
+
           <p className="kicker">{handle}</p>
           <h1 className="heroTitle">{name}</h1>
           <p className="heroSubtitle">{bio}</p>
